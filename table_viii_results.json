@@ -1,0 +1,214 @@
+{
+  "config": {
+    "checkpoint_dir": "C:\\Users\\Madhusudan\\downloads\\m2cl6tap",
+    "data_root": "C:\\Users\\Madhusudan\\Downloads\\PACS",
+    "domains": [
+      "art_painting",
+      "cartoon",
+      "photo",
+      "sketch"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "checkpoint_pattern": "m2cl6tap_{domain}_seed{seed}.pt",
+    "split_seed": 42,
+    "probe_seed": 0,
+    "domain_split_ratio": 0.3,
+    "n_bootstrap": 2000,
+    "batch_size": 64,
+    "output": "table_viii_results.json"
+  },
+  "results": {
+    "art_painting": {
+      "imagenet_acc": 91.1875786823332,
+      "m2cl_6tap_acc_mean": 90.57210798713106,
+      "m2cl_6tap_acc_std": 0.6532546889822695,
+      "delta_pp_mean": -0.6154706952021249,
+      "delta_pp_std": 0.653254688982271,
+      "per_seed_p_values": [
+        0.026,
+        0.377,
+        0.988
+      ],
+      "per_seed_detail": [
+        {
+          "seed": 0,
+          "acc": 89.88669744020143,
+          "acc_a": 0.8988669744020142,
+          "acc_b": 0.9118757868233319,
+          "observed_diff_pp": -1.3008812421317684,
+          "ci_lower_pp": -2.51783466219051,
+          "ci_upper_pp": -0.12589173310952884,
+          "p_value": 0.026,
+          "significant_at_0.05": true
+        },
+        {
+          "seed": 1,
+          "acc": 90.64204783885859,
+          "acc_a": 0.9064204783885859,
+          "acc_b": 0.9118757868233319,
+          "observed_diff_pp": -0.5455308434746065,
+          "ci_lower_pp": -1.720520352496857,
+          "ci_upper_pp": 0.6294586655476331,
+          "p_value": 0.377,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 2,
+          "acc": 91.1875786823332,
+          "acc_a": 0.9118757868233319,
+          "acc_b": 0.9118757868233319,
+          "observed_diff_pp": 0.0,
+          "ci_lower_pp": -1.1749895090222506,
+          "ci_upper_pp": 1.2169534200587528,
+          "p_value": 0.988,
+          "significant_at_0.05": false
+        }
+      ]
+    },
+    "cartoon": {
+      "imagenet_acc": 88.40958605664488,
+      "m2cl_6tap_acc_mean": 88.04647785039941,
+      "m2cl_6tap_acc_std": 0.4450705430949775,
+      "delta_pp_mean": -0.363108206245466,
+      "delta_pp_std": 0.4450705430949727,
+      "per_seed_p_values": [
+        0.984,
+        0.138,
+        0.796
+      ],
+      "per_seed_detail": [
+        {
+          "seed": 0,
+          "acc": 88.36601307189542,
+          "acc_a": 0.8836601307189542,
+          "acc_b": 0.8840958605664488,
+          "observed_diff_pp": -0.043572984749462584,
+          "ci_lower_pp": -1.0457516339869355,
+          "ci_upper_pp": 1.002178649237473,
+          "p_value": 0.984,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 1,
+          "acc": 87.53812636165577,
+          "acc_a": 0.8753812636165578,
+          "acc_b": 0.8840958605664488,
+          "observed_diff_pp": -0.8714596949891074,
+          "ci_lower_pp": -1.9618736383442308,
+          "ci_upper_pp": 0.2614379084967311,
+          "p_value": 0.138,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 2,
+          "acc": 88.23529411764706,
+          "acc_a": 0.8823529411764706,
+          "acc_b": 0.8840958605664488,
+          "observed_diff_pp": -0.17429193899782813,
+          "ci_lower_pp": -1.350762527233107,
+          "ci_upper_pp": 0.9150326797385588,
+          "p_value": 0.796,
+          "significant_at_0.05": false
+        }
+      ]
+    },
+    "photo": {
+      "imagenet_acc": 88.2659191029235,
+      "m2cl_6tap_acc_mean": 89.13362701908959,
+      "m2cl_6tap_acc_std": 0.23466020332728266,
+      "delta_pp_mean": 0.867707916166068,
+      "delta_pp_std": 0.23466020332728188,
+      "per_seed_p_values": [
+        0.125,
+        0.333,
+        0.077
+      ],
+      "per_seed_detail": [
+        {
+          "seed": 0,
+          "acc": 89.22707248698438,
+          "acc_a": 0.8922707248698438,
+          "acc_b": 0.8826591910292351,
+          "observed_diff_pp": 0.9611533840608755,
+          "ci_lower_pp": -0.20124148978775064,
+          "ci_upper_pp": 2.2026431718061623,
+          "p_value": 0.125,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 1,
+          "acc": 88.86663996796156,
+          "acc_a": 0.8886663996796156,
+          "acc_b": 0.8826591910292351,
+          "observed_diff_pp": 0.6007208650380513,
+          "ci_lower_pp": -0.5606728073688338,
+          "ci_upper_pp": 1.7621145374449365,
+          "p_value": 0.333,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 2,
+          "acc": 89.30716860232279,
+          "acc_a": 0.8930716860232278,
+          "acc_b": 0.8826591910292351,
+          "observed_diff_pp": 1.0412494993992771,
+          "ci_lower_pp": -0.08009611533840166,
+          "ci_upper_pp": 2.2026431718061628,
+          "p_value": 0.077,
+          "significant_at_0.05": false
+        }
+      ]
+    },
+    "sketch": {
+      "imagenet_acc": 67.28971962616822,
+      "m2cl_6tap_acc_mean": 67.82114715044895,
+      "m2cl_6tap_acc_std": 0.8252395271539472,
+      "delta_pp_mean": 0.5314275242807439,
+      "delta_pp_std": 0.8252395271539474,
+      "per_seed_p_values": [
+        0.135,
+        0.807,
+        0.631
+      ],
+      "per_seed_detail": [
+        {
+          "seed": 0,
+          "acc": 68.66410115448048,
+          "acc_a": 0.6866410115448048,
+          "acc_b": 0.6728971962616822,
+          "observed_diff_pp": 1.374381528312263,
+          "ci_lower_pp": -0.43980208905991525,
+          "ci_upper_pp": 3.353490929081915,
+          "p_value": 0.135,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 1,
+          "acc": 67.01484332050576,
+          "acc_a": 0.6701484332050577,
+          "acc_b": 0.6728971962616822,
+          "observed_diff_pp": -0.2748763056624526,
+          "ci_lower_pp": -2.0904343045629536,
+          "ci_upper_pp": 1.6492578339747155,
+          "p_value": 0.807,
+          "significant_at_0.05": false
+        },
+        {
+          "seed": 2,
+          "acc": 67.78449697636064,
+          "acc_a": 0.6778449697636064,
+          "acc_b": 0.6728971962616822,
+          "observed_diff_pp": 0.4947773501924213,
+          "ci_lower_pp": -1.4293567894447468,
+          "ci_upper_pp": 2.4189114898295783,
+          "p_value": 0.631,
+          "significant_at_0.05": false
+        }
+      ]
+    }
+  }
+}

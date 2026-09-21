@@ -1,0 +1,557 @@
+{
+  "config": {
+    "checkpoint_dir": "C:\\Users\\Madhusudan\\Downloads\\m2cl_checkpoints",
+    "data_root": "C:\\Users\\Madhusudan\\Downloads\\PACS",
+    "model_types": [
+      "erm",
+      "m2",
+      "m2cl"
+    ],
+    "domains": [
+      "photo",
+      "art_painting"
+    ],
+    "n_permutations": 50,
+    "domain_split_ratio": 0.3,
+    "bootstrap_resamples": 1000,
+    "seed": 42
+  },
+  "results": {
+    "erm": {
+      "photo": {
+        "domain_probes": {
+          "backbone_final": {
+            "linear_acc": 0.877853,
+            "nonlinear_acc": 0.876252,
+            "ci_lower": 0.872647,
+            "ci_upper": 0.898678,
+            "p_value": 0.019608,
+            "null_mean": 0.459311,
+            "null_std": 0.022178
+          }
+        },
+        "class_probes": {
+          "backbone_final": {
+            "linear_acc": 0.257485,
+            "nonlinear_acc": 0.3
+          }
+        }
+      },
+      "art_painting": {
+        "domain_probes": {
+          "backbone_final": {
+            "linear_acc": 0.913554,
+            "nonlinear_acc": 0.905581,
+            "ci_lower": 0.90726,
+            "ci_upper": 0.929081,
+            "p_value": 0.019608,
+            "null_mean": 0.482081,
+            "null_std": 0.014758
+          }
+        },
+        "class_probes": {
+          "backbone_final": {
+            "linear_acc": 0.23584,
+            "nonlinear_acc": 0.218262
+          }
+        }
+      }
+    },
+    "m2": {
+      "photo": {
+        "domain_probes": {
+          "layer1_features": {
+            "linear_acc": 0.788947,
+            "nonlinear_acc": 0.862635,
+            "ci_lower": 0.775731,
+            "ci_upper": 0.80817,
+            "p_value": 0.019608,
+            "null_mean": 0.470693,
+            "null_std": 0.008776
+          },
+          "layer2_features": {
+            "linear_acc": 0.824589,
+            "nonlinear_acc": 0.87505,
+            "ci_lower": 0.805356,
+            "ci_upper": 0.836213,
+            "p_value": 0.019608,
+            "null_mean": 0.470845,
+            "null_std": 0.009178
+          },
+          "layer3_features": {
+            "linear_acc": 0.859031,
+            "nonlinear_acc": 0.892671,
+            "ci_lower": 0.844604,
+            "ci_upper": 0.871446,
+            "p_value": 0.019608,
+            "null_mean": 0.472968,
+            "null_std": 0.008017
+          },
+          "layer4_features": {
+            "linear_acc": 0.88346,
+            "nonlinear_acc": 0.883861,
+            "ci_lower": 0.869834,
+            "ci_upper": 0.895074,
+            "p_value": 0.019608,
+            "null_mean": 0.447369,
+            "null_std": 0.03739
+          },
+          "gap_backbone": {
+            "linear_acc": 0.88346,
+            "nonlinear_acc": 0.865839,
+            "ci_lower": 0.871446,
+            "ci_upper": 0.896276,
+            "p_value": 0.019608,
+            "null_mean": 0.458086,
+            "null_std": 0.02808
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.817781,
+            "nonlinear_acc": 0.807369,
+            "ci_lower": 0.807759,
+            "ci_upper": 0.837815,
+            "p_value": 0.019608,
+            "null_mean": 0.462219,
+            "null_std": 0.022357
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.818983,
+            "nonlinear_acc": 0.825791,
+            "ci_lower": 0.803354,
+            "ci_upper": 0.833801,
+            "p_value": 0.019608,
+            "null_mean": 0.47026,
+            "null_std": 0.009864
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.848218,
+            "nonlinear_acc": 0.848218,
+            "ci_lower": 0.838196,
+            "ci_upper": 0.865439,
+            "p_value": 0.019608,
+            "null_mean": 0.471766,
+            "null_std": 0.008866
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.859431,
+            "nonlinear_acc": 0.862235,
+            "ci_lower": 0.845004,
+            "ci_upper": 0.871045,
+            "p_value": 0.019608,
+            "null_mean": 0.471061,
+            "null_std": 0.0088
+          }
+        },
+        "class_probes": {
+          "layer1_features": {
+            "linear_acc": 0.200599,
+            "nonlinear_acc": 0.213772
+          },
+          "layer2_features": {
+            "linear_acc": 0.190419,
+            "nonlinear_acc": 0.259281
+          },
+          "layer3_features": {
+            "linear_acc": 0.237725,
+            "nonlinear_acc": 0.247904
+          },
+          "layer4_features": {
+            "linear_acc": 0.275449,
+            "nonlinear_acc": 0.248503
+          },
+          "gap_backbone": {
+            "linear_acc": 0.292216,
+            "nonlinear_acc": 0.267665
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.268862,
+            "nonlinear_acc": 0.242515
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.220958,
+            "nonlinear_acc": 0.21018
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.258084,
+            "nonlinear_acc": 0.28982
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.266467,
+            "nonlinear_acc": 0.250299
+          }
+        }
+      },
+      "art_painting": {
+        "domain_probes": {
+          "layer1_features": {
+            "linear_acc": 0.824591,
+            "nonlinear_acc": 0.879564,
+            "ci_lower": 0.808225,
+            "ci_upper": 0.838859,
+            "p_value": 0.019608,
+            "null_mean": 0.49441,
+            "null_std": 0.010465
+          },
+          "layer2_features": {
+            "linear_acc": 0.835082,
+            "nonlinear_acc": 0.921947,
+            "ci_lower": 0.831714,
+            "ci_upper": 0.86068,
+            "p_value": 0.019608,
+            "null_mean": 0.493479,
+            "null_std": 0.009038
+          },
+          "layer3_features": {
+            "linear_acc": 0.865716,
+            "nonlinear_acc": 0.93076,
+            "ci_lower": 0.847251,
+            "ci_upper": 0.875787,
+            "p_value": 0.019608,
+            "null_mean": 0.494368,
+            "null_std": 0.008804
+          },
+          "layer4_features": {
+            "linear_acc": 0.900546,
+            "nonlinear_acc": 0.924465,
+            "ci_lower": 0.900546,
+            "ci_upper": 0.922786,
+            "p_value": 0.019608,
+            "null_mean": 0.469677,
+            "null_std": 0.035197
+          },
+          "gap_backbone": {
+            "linear_acc": 0.90684,
+            "nonlinear_acc": 0.911036,
+            "ci_lower": 0.903053,
+            "ci_upper": 0.924885,
+            "p_value": 0.019608,
+            "null_mean": 0.472463,
+            "null_std": 0.04047
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.867814,
+            "nonlinear_acc": 0.869492,
+            "ci_lower": 0.855644,
+            "ci_upper": 0.882931,
+            "p_value": 0.019608,
+            "null_mean": 0.483391,
+            "null_std": 0.029828
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.853546,
+            "nonlinear_acc": 0.864457,
+            "ci_lower": 0.842635,
+            "ci_upper": 0.869492,
+            "p_value": 0.019608,
+            "null_mean": 0.489064,
+            "null_std": 0.010441
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.866974,
+            "nonlinear_acc": 0.877465,
+            "ci_lower": 0.856064,
+            "ci_upper": 0.88418,
+            "p_value": 0.019608,
+            "null_mean": 0.493135,
+            "null_std": 0.009142
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.89551,
+            "nonlinear_acc": 0.873689,
+            "ci_lower": 0.880392,
+            "ci_upper": 0.904742,
+            "p_value": 0.019608,
+            "null_mean": 0.492698,
+            "null_std": 0.00936
+          }
+        },
+        "class_probes": {
+          "layer1_features": {
+            "linear_acc": 0.225098,
+            "nonlinear_acc": 0.220703
+          },
+          "layer2_features": {
+            "linear_acc": 0.227051,
+            "nonlinear_acc": 0.226074
+          },
+          "layer3_features": {
+            "linear_acc": 0.239258,
+            "nonlinear_acc": 0.229004
+          },
+          "layer4_features": {
+            "linear_acc": 0.211914,
+            "nonlinear_acc": 0.205078
+          },
+          "gap_backbone": {
+            "linear_acc": 0.226562,
+            "nonlinear_acc": 0.228516
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.241699,
+            "nonlinear_acc": 0.234863
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.216797,
+            "nonlinear_acc": 0.197754
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.236328,
+            "nonlinear_acc": 0.229004
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.242676,
+            "nonlinear_acc": 0.211914
+          }
+        }
+      }
+    },
+    "m2cl": {
+      "photo": {
+        "domain_probes": {
+          "layer1_features": {
+            "linear_acc": 0.780937,
+            "nonlinear_acc": 0.863837,
+            "ci_lower": 0.782129,
+            "ci_upper": 0.812185,
+            "p_value": 0.019608,
+            "null_mean": 0.473256,
+            "null_std": 0.007532
+          },
+          "layer2_features": {
+            "linear_acc": 0.823388,
+            "nonlinear_acc": 0.891069,
+            "ci_lower": 0.809371,
+            "ci_upper": 0.838206,
+            "p_value": 0.019608,
+            "null_mean": 0.470565,
+            "null_std": 0.008076
+          },
+          "layer3_features": {
+            "linear_acc": 0.852623,
+            "nonlinear_acc": 0.897076,
+            "ci_lower": 0.838206,
+            "ci_upper": 0.86625,
+            "p_value": 0.019608,
+            "null_mean": 0.473064,
+            "null_std": 0.00841
+          },
+          "layer4_features": {
+            "linear_acc": 0.884662,
+            "nonlinear_acc": 0.881858,
+            "ci_lower": 0.867431,
+            "ci_upper": 0.893072,
+            "p_value": 0.019608,
+            "null_mean": 0.456099,
+            "null_std": 0.025844
+          },
+          "gap_backbone": {
+            "linear_acc": 0.881858,
+            "nonlinear_acc": 0.870645,
+            "ci_lower": 0.869443,
+            "ci_upper": 0.893883,
+            "p_value": 0.019608,
+            "null_mean": 0.446696,
+            "null_std": 0.035496
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.820985,
+            "nonlinear_acc": 0.818582,
+            "ci_lower": 0.798949,
+            "ci_upper": 0.829806,
+            "p_value": 0.019608,
+            "null_mean": 0.461073,
+            "null_std": 0.020238
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.821386,
+            "nonlinear_acc": 0.829796,
+            "ci_lower": 0.798959,
+            "ci_upper": 0.829796,
+            "p_value": 0.019608,
+            "null_mean": 0.468682,
+            "null_std": 0.008004
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.851422,
+            "nonlinear_acc": 0.849419,
+            "ci_lower": 0.837405,
+            "ci_upper": 0.864247,
+            "p_value": 0.019608,
+            "null_mean": 0.470741,
+            "null_std": 0.007726
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.85863,
+            "nonlinear_acc": 0.856628,
+            "ci_lower": 0.844213,
+            "ci_upper": 0.871446,
+            "p_value": 0.019608,
+            "null_mean": 0.471446,
+            "null_std": 0.008147
+          }
+        },
+        "class_probes": {
+          "layer1_features": {
+            "linear_acc": 0.167665,
+            "nonlinear_acc": 0.256886
+          },
+          "layer2_features": {
+            "linear_acc": 0.219162,
+            "nonlinear_acc": 0.264072
+          },
+          "layer3_features": {
+            "linear_acc": 0.228743,
+            "nonlinear_acc": 0.256287
+          },
+          "layer4_features": {
+            "linear_acc": 0.245509,
+            "nonlinear_acc": 0.228743
+          },
+          "gap_backbone": {
+            "linear_acc": 0.285629,
+            "nonlinear_acc": 0.310778
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.218563,
+            "nonlinear_acc": 0.277246
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.224551,
+            "nonlinear_acc": 0.232934
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.244311,
+            "nonlinear_acc": 0.259281
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.257485,
+            "nonlinear_acc": 0.264072
+          }
+        }
+      },
+      "art_painting": {
+        "domain_probes": {
+          "layer1_features": {
+            "linear_acc": 0.82543,
+            "nonlinear_acc": 0.873269,
+            "ci_lower": 0.814929,
+            "ci_upper": 0.845583,
+            "p_value": 0.019608,
+            "null_mean": 0.493345,
+            "null_std": 0.006968
+          },
+          "layer2_features": {
+            "linear_acc": 0.838019,
+            "nonlinear_acc": 0.921528,
+            "ci_lower": 0.821653,
+            "ci_upper": 0.852287,
+            "p_value": 0.019608,
+            "null_mean": 0.497323,
+            "null_std": 0.007991
+          },
+          "layer3_features": {
+            "linear_acc": 0.865716,
+            "nonlinear_acc": 0.921108,
+            "ci_lower": 0.842635,
+            "ci_upper": 0.869922,
+            "p_value": 0.019608,
+            "null_mean": 0.496358,
+            "null_std": 0.009013
+          },
+          "layer4_features": {
+            "linear_acc": 0.912295,
+            "nonlinear_acc": 0.913554,
+            "ci_lower": 0.898447,
+            "ci_upper": 0.922797,
+            "p_value": 0.019608,
+            "null_mean": 0.477499,
+            "null_std": 0.031204
+          },
+          "gap_backbone": {
+            "linear_acc": 0.909358,
+            "nonlinear_acc": 0.921528,
+            "ci_lower": 0.893412,
+            "ci_upper": 0.916922,
+            "p_value": 0.019608,
+            "null_mean": 0.47603,
+            "null_std": 0.033967
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.869492,
+            "nonlinear_acc": 0.866555,
+            "ci_lower": 0.857742,
+            "ci_upper": 0.88376,
+            "p_value": 0.019608,
+            "null_mean": 0.486102,
+            "null_std": 0.025051
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.853546,
+            "nonlinear_acc": 0.868233,
+            "ci_lower": 0.831305,
+            "ci_upper": 0.86068,
+            "p_value": 0.019608,
+            "null_mean": 0.490004,
+            "null_std": 0.013572
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.866974,
+            "nonlinear_acc": 0.877885,
+            "ci_lower": 0.854385,
+            "ci_upper": 0.882942,
+            "p_value": 0.019608,
+            "null_mean": 0.494704,
+            "null_std": 0.007704
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.891313,
+            "nonlinear_acc": 0.90684,
+            "ci_lower": 0.880822,
+            "ci_upper": 0.905162,
+            "p_value": 0.019608,
+            "null_mean": 0.492153,
+            "null_std": 0.013341
+          }
+        },
+        "class_probes": {
+          "layer1_features": {
+            "linear_acc": 0.228027,
+            "nonlinear_acc": 0.219727
+          },
+          "layer2_features": {
+            "linear_acc": 0.223633,
+            "nonlinear_acc": 0.209473
+          },
+          "layer3_features": {
+            "linear_acc": 0.231934,
+            "nonlinear_acc": 0.236816
+          },
+          "layer4_features": {
+            "linear_acc": 0.224121,
+            "nonlinear_acc": 0.207031
+          },
+          "gap_backbone": {
+            "linear_acc": 0.234375,
+            "nonlinear_acc": 0.225586
+          },
+          "e1_contrastive": {
+            "linear_acc": 0.22998,
+            "nonlinear_acc": 0.223145
+          },
+          "e2_contrastive": {
+            "linear_acc": 0.216309,
+            "nonlinear_acc": 0.205566
+          },
+          "e3_contrastive": {
+            "linear_acc": 0.234375,
+            "nonlinear_acc": 0.207031
+          },
+          "e4_contrastive": {
+            "linear_acc": 0.229492,
+            "nonlinear_acc": 0.228516
+          }
+        }
+      }
+    }
+  }
+}
